@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile></DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="BusinessOnline\**" />
+		<Compile Remove="Collection\**" />
+		<Compile Remove="CRM\**" />
+		<Compile Remove="Documents\**" />
+		<Compile Remove="Freightware\**" />
+		<Compile Remove="HR\**" />
+		<Compile Remove="Operations\**" />
+		<Compile Remove="PurchaseOrders\**" />
+		<Compile Remove="Sales\**" />
+		<Compile Remove="Suppliers\**" />
+		<Compile Remove="TritonGroup\**" />
+		<Compile Remove="TritonSecurity\**" />
+		<Compile Remove="Vehicles\**" />
+		<Compile Remove="Waybill\**" />
+		<EmbeddedResource Remove="BusinessOnline\**" />
+		<EmbeddedResource Remove="Collection\**" />
+		<EmbeddedResource Remove="CRM\**" />
+		<EmbeddedResource Remove="Documents\**" />
+		<EmbeddedResource Remove="Freightware\**" />
+		<EmbeddedResource Remove="HR\**" />
+		<EmbeddedResource Remove="Operations\**" />
+		<EmbeddedResource Remove="PurchaseOrders\**" />
+		<EmbeddedResource Remove="Sales\**" />
+		<EmbeddedResource Remove="Suppliers\**" />
+		<EmbeddedResource Remove="TritonGroup\**" />
+		<EmbeddedResource Remove="TritonSecurity\**" />
+		<EmbeddedResource Remove="Vehicles\**" />
+		<EmbeddedResource Remove="Waybill\**" />
+		<None Remove="BusinessOnline\**" />
+		<None Remove="Collection\**" />
+		<None Remove="CRM\**" />
+		<None Remove="Documents\**" />
+		<None Remove="Freightware\**" />
+		<None Remove="HR\**" />
+		<None Remove="Operations\**" />
+		<None Remove="PurchaseOrders\**" />
+		<None Remove="Sales\**" />
+		<None Remove="Suppliers\**" />
+		<None Remove="TritonGroup\**" />
+		<None Remove="TritonSecurity\**" />
+		<None Remove="Vehicles\**" />
+		<None Remove="Waybill\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.0.35" />
+		<PackageReference Include="Dapper.Contrib" Version="2.0.35" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="3.1.2" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.0-preview.8.20414.8" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="Serilog" Version="2.9.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />		
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Model\TritonFleetManagement\Views\" />
+	</ItemGroup>
+</Project>

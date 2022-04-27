@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Triton.Service</name>
+    </assembly>
+    <members>
+        <member name="M:Triton.Service.BusinessOnline.BusinessOnlineServices.GetCustomerDashboard(System.Int32,System.Boolean,System.DateTime)">
+            <summary>
+            Get the CSA / Customer information to build a dashboard
+            </summary>
+            <param name="userId"></param>
+            <param name="isTritonGroupUserId"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.BusinessOnline.BusinessOnlineServices.GetWaybillsByType(System.String,System.String,System.Boolean,System.Nullable{System.DateTime})">
+            <summary>
+            Get all the waybill information by category for CSA or customers
+            </summary>
+            <param name="customerId"></param>
+            <param name="type"></param>
+            <param name="mobile"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.BusinessOnline.BusinessOnlineServices.GetDeliveryStatusCount(System.String)">
+            <summary>
+            Waybill Status Summary for CSA or customers
+            </summary>
+            <param name="customerIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.BusinessOnline.BusinessOnlineServices.GetDashboardForCustomerMultiQuery(System.String,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Multi-query to get all the information for CSA/Customer dashboard
+            </summary>
+            <param name="customerIds"></param>
+            <param name="userId"></param>
+            <param name="isTritonGroupUserId"></param>
+            <param name="date"></param>
+            <param name="tableName"></param>
+            <returns>Returns a multi-query to build the dashboard for the BusinessOnline System of type CSADashboardModel</returns>
+        </member>
+        <member name="M:Triton.Service.BusinessOnline.BusinessOnlineServices.GetCustomerDeliveriesByStatus(System.String,System.String)">
+            <summary>
+            Gets a waybill list by the customerId's and type such as Bookings etc
+            </summary>
+            <param name="customerIds"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.CRM.CustomerService.FindCrmCustomerByIds(System.String)">
+            <summary>
+            Find a list of customers by supplying a string of multiple customerId's
+            </summary>
+            <param name="customerIds"></param>
+            <returns>A List of Customers</returns>
+        </member>
+        <member name="M:Triton.Service.StartupService.AddService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Service for the websites
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.RoleService.GetRolesByUserId(System.Int32,System.String)">
+            <summary>
+            Get the users roles as a List
+            </summary>
+            <param name="userId"></param>
+            <param name="dbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.RoleService.GetRolesByIds(System.String,System.String)">
+            <summary>
+            Get a list of Roles using an IN statement in the query for the RoleID's
+            </summary>
+            <param name="roleIDs"></param>
+            <param name="dbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserCustomerMapService.GetUserCustomerMapByUserId(System.Int32)">
+            <summary>
+            Get the customers mapped to a user by the UserID
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserMapService.GetUserMap(System.Int32)">
+            <summary>
+            Get a record from the UserMap table by passing in the UserMapId
+            </summary>
+            <param name="userMapId"></param>
+            <returns>Returns an object of type UserMap</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserMapService.GetUserMapByUserType(System.Int32)">
+            <summary>
+            Get a list of users based on the user type (userTypeLcid)
+            </summary>
+            <param name="userTypeLcid"></param>
+            <returns>Returns a List of Users</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserMapService.GetUserCustomerMapModel(System.Int32)">
+            <summary>
+            Get the UserMap with Customers object
+            </summary>
+            <param name="userId"></param>
+            <returns>Returns a list of UserMaps and Customers</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserMapService.PostUserMapObject(Triton.Model.TritonGroup.Tables.UserMap)">
+            <summary>
+            Insert a new record into the UserMap table
+            </summary>
+            <param name="userMap"></param>
+            <returns>Returns a string eg:  Duplicate Employee, Invalid UserTypeLCID, Created etc...</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserMapService.PutUserMap(Triton.Model.TritonGroup.Tables.UserMap)">
+            <summary>
+            Update an existing record in the UserMap table
+            </summary>
+            <param name="userMap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserRoleService.GetUserRole(System.Int32)">
+            <summary>
+            Gets the UserRoles by UserRoleID
+            </summary>
+            <param name="userRoleId"></param>
+            <returns>Returns a single UserRole</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserService.FindByNameAsync(System.String)">
+            <summary>
+            Gets the user by their username
+            </summary>
+            <param name="username"></param>
+            <returns>Returns a single user</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserService.CreateAsync(Triton.Model.TritonGroup.Tables.Users)">
+            <summary>
+            Creates a new user and returns the user object
+            </summary>
+            <param name="user"></param>
+            <returns>Returns a user object</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserService.Post(Triton.Model.TritonGroup.Tables.Users)">
+            <summary>
+            Creates a new user and returns a UserID
+            </summary>
+            <param name="user"></param>
+            <returns>Returns a UserID</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserService.PutUpdateAsync(Triton.Model.TritonGroup.Tables.Users)">
+            <summary>
+            Updates an existing user
+            </summary>
+            <param name="user"></param>
+            <returns>Returns a boolean</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserService.FindByIdAsync(System.Int32)">
+            <summary>
+            Gets the user by their UserID
+            </summary>
+            <param name="userId"></param>
+            <returns>Returns a single user</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserService.GetAllUsersInclLockedOut">
+            <summary>
+            Gets all the users including locked out users
+            </summary>
+            <returns>Returns a list of users</returns>
+        </member>
+        <member name="M:Triton.Service.TritonGroup.UserService.GetUserWithRoles(System.Int32,System.String)">
+            <summary>
+            Gets the User/UserRoles and Roles for creating views
+            </summary>
+            <param name="userId"></param>
+            <param name="roleIds"></param>
+            <returns>Returns a UserWithRoles model</returns>
+        </member>
+    </members>
+</doc>

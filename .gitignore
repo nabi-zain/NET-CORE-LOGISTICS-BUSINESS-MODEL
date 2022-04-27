@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/tests/Triton.Service.Tests/obj
+/tests/Triton.Service.Tests/bin/Debug/netcoreapp3.1

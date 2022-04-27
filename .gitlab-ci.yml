@@ -1,0 +1,34 @@
+# place project specific paths in variables to make the rest of the script more generic
+variables:
+  NUGET_PATH: 'C:\NuGet\nuget.exe'
+  MSBUILD_PATH: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\MSBuild.exe'
+  GIT_SUBMODULE_STRATEGY: recursive
+  PROJECTNAME: 'Triton.Service'
+
+stages:
+  - build
+  - test
+
+Build:
+  stage: build
+  tags:  # the build process will only be started by git tag commits
+    -  dev
+  script:
+    - '& "$env:NUGET_PATH" restore'  # restore Nuget dependencies
+    - '& "$env:MSBUILD_PATH" "$env:PROJECTNAME".csproj /p:DeployOnBuild=true /p:Configuration=Release /p:EnvironmentName=Development /p:PublishProfile="Properties\PublishProfiles\Development.pubxml"'  # build the project
+  artifacts:
+    expire_in: 30 mins  # save gitlab server space, we copy the files we need to deploy folder later on
+
+Test:
+  stage: test
+  script: 
+    - 'dotnet test . --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose"'
+  artifacts:
+    when: always
+    paths: 
+     - ./**/*test-result.xml
+    reports:
+      junit: 
+       - ./**/*test-result.xml
+  tags:
+    -  dev

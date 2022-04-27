@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a196c196_002D749d_002D40be_002D92bc_002D5e936286ed59/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAsync_Success" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::284E574B-FF0D-46DB-A6C4-778AEBF76D14::.NETCoreApp,Version=v3.1::Triton.Service.Tests.RateService_Tests.GetIncreaseMatrixListAsync_Success&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cb04a562_002D02c8_002D43a8_002D81d6_002De1dc6c840a51/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PutEmployee_Success" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::284E574B-FF0D-46DB-A6C4-778AEBF76D14::.NETCoreApp,Version=v3.1::Triton.Service.Tests.WaybillService_Tests.GetWaybillByWaybillNo_Success&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
